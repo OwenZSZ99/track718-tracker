@@ -8,8 +8,8 @@ track718 快递批量查询入口
     python scripts/batch_query.py --nums nums.txt --output result.json  # 导出 JSON
 
 示例:
-    python scripts/batch_query.py --nums "61290349243121618775"
-    python scripts/batch_query.py --nums "61290349243121618775,9202097262537727250717"
+    python scripts/batch_query.py --nums "LP123456789US"
+    python scripts/batch_query.py --nums "LP123456789US,LP987654321US"
     python scripts/batch_query.py --nums nums.txt --headless --output result.json
 """
 
@@ -48,7 +48,7 @@ def main():
         description="track718 快递批量查询工具",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""使用示例:
-  %(prog)s --nums "61290349243121618775"
+  %(prog)s --nums "LP123456789US"
   %(prog)s --nums "单号1,单号2,单号3"
   %(prog)s --nums nums.txt --headless --output result.json
   %(prog)s --nums nums.txt --headless --output result.json --no-progress

@@ -73,7 +73,7 @@ playwright install chromium
 ### 查询单个快递
 
 ```bash
-python scripts/batch_query.py --nums "61290349243121618775"
+python scripts/batch_query.py --nums "LP123456789US"
 ```
 
 ### 查询多个快递
@@ -87,7 +87,7 @@ python scripts/batch_query.py --nums "单号1,单号2,单号3"
 准备 `nums.txt`，每行一个快递单号（示例）：
 
 ```
-61290349243121618775
+LP123456789US
 ```
 
 执行：
@@ -128,7 +128,7 @@ from track718.playwright import Track718Playwright
 
 # 使用 Playwright 查询追踪信息
 with Track718Playwright(headless=True) as client:
-    result = client.query_by_nums(["61290349243121618775"])
+    result = client.query_by_nums(["LP123456789US"])
     
     # 提取追踪信息
     for item in result.get("data", []):
@@ -147,7 +147,7 @@ with Track718Playwright(headless=True) as client:
 {
   "data": [
     {
-      "track": "61290349243121618775",
+      "track": "LP123456789US",
       "fromKey": "special.fedex.com",
       "fromCode": "US",
       "toCode": "US",
