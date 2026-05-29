@@ -63,7 +63,7 @@ def capture(nums: str, headless: bool = False):
 
 def main():
     parser = argparse.ArgumentParser(description="捕获 track718 API 请求详情")
-    parser.add_argument("--nums", default="61290349243121618775", help="快递单号")
+    parser.add_argument("--nums", default="61290349243121618775", help="快递单号(示例)")
     parser.add_argument("--headless", action="store_true", help="无头模式")
     args = parser.parse_args()
 
